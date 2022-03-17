@@ -202,6 +202,17 @@ pipeline:
                               variables: []
                   sharedPaths:
                       - /var/run
+                  serviceDependencies:
+                      - identifier: dind
+                        name: dind
+                        type: Service
+                        spec:
+                            connectorRef: nikpdockerhub
+                            image: docker:dind
+                            privileged: true
+                            entrypoint:
+                                - dockerd-entrypoint.sh
+                            imagePullPolicy: IfNotPresent
               when:
                   pipelineStatus: Success
         - stage:
