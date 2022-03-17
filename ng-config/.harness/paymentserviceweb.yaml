@@ -121,7 +121,7 @@ pipeline:
                                       name: Brakeman Scan
                                       identifier: Brakeman_Scan
                                       spec:
-                                          connectorRef: harnessImage
+                                          connectorRef: nikpdockerhub
                                           privileged: true
                                           settings:
                                               policy_type: orchestratedScan
