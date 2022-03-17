@@ -200,6 +200,8 @@ pipeline:
                           type: Kubernetes
                           spec:
                               variables: []
+                  sharedPaths:
+                      - /var/run
               when:
                   pipelineStatus: Success
         - stage:
