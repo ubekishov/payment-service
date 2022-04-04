@@ -614,6 +614,15 @@ pipeline:
         - name: sto_api_key
           type: Secret
           value: STOJWT
+        - name: runner_registry_username
+          type: Secret
+          value: ZN_Docker_Student_Username
+        - name: runner_registry_token
+          type: Secret
+          value: zeronorthpass
+        - name: runner_tag
+          type: String
+          value: dev
     flowControl:
         barriers:
             - name: Barrier
