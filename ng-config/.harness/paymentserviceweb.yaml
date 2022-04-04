@@ -239,6 +239,22 @@ pipeline:
                             imagePullPolicy: IfNotPresent
               when:
                   pipelineStatus: Success
+              variables:
+                  - name: sto_api_key
+                    type: Secret
+                    value: STOJWT
+                  - name: runner_registry_username
+                    type: Secret
+                    value: ZN_Docker_Student_Username
+                  - name: runner_registry_token
+                    type: Secret
+                    value: zeronorthpass
+                  - name: runner_tag
+                    type: String
+                    value: dev
+                  - name: api_domain_name
+                    type: String
+                    value: https://api.sto.harness.io
         - stage:
               name: DeployDev
               identifier: DeployDev
