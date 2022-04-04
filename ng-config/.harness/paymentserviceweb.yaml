@@ -612,8 +612,8 @@ pipeline:
           type: String
           value: https://api.sto.harness.io
         - name: sto_api_key
-          type: String
-          value: to be added
+          type: Secret
+          value: STOJWT
     flowControl:
         barriers:
             - name: Barrier
