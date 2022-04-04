@@ -608,6 +608,12 @@ pipeline:
         - name: dbpassword
           type: String
           value: <+secrets.getValue("dbpassword")>
+        - name: api_domain_name
+          type: String
+          value: https://api.sto.harness.io
+        - name: sto_api_key
+          type: String
+          value: to be added
     flowControl:
         barriers:
             - name: Barrier
