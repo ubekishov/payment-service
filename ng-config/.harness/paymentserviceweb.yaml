@@ -639,6 +639,10 @@ pipeline:
         - name: runner_tag
           type: String
           value: dev
+        - name: run_owasp_scan
+          type: String
+          default: "false"
+          value: <+input>.allowedValues(true,false)
     flowControl:
         barriers:
             - name: Barrier
