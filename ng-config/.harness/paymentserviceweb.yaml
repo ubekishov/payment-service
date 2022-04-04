@@ -146,7 +146,7 @@ pipeline:
                                         policy_type: orchestratedScan
                                         scan_type: repository
                                         repository_project: payment-service
-                                        repository_branch: <+codebase.branch>
+                                        repository_branch: master
                                         product_name: owasp
                                         product_config_name: owasp 5.x
                                         fail_on_severity: HIGH
