@@ -637,9 +637,6 @@ pipeline:
         - name: dbpassword
           type: Secret
           value: dbpassword
-        - name: verify_fail2
-          type: String
-          value: test
     flowControl:
         barriers:
             - name: Barrier
