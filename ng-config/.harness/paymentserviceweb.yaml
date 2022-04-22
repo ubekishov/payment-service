@@ -319,7 +319,7 @@ pipeline:
                   execution:
                       steps:
                           - step:
-                                type: JiraCreate
+                                type: ServiceNowCreate
                                 name: JiraCreate
                                 identifier: JiraCreate
                                 spec:
